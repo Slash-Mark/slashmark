@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Slash Mark</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: url("images/bg.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            padding: 60px 20px 30px 20px;
+            height: 620px;
+            width: 350px;
+            background-color: rgba(88, 218, 227, 0);
+            border-radius: 30px;
+            -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+            border: 3px solid rgba(13, 13, 13, 0.884);
+            overflow: hidden;
+        }
+
+        .box-login {
+            position: absolute;
+            width: 85%;
+            left: 27px;
+            transition: .5s ease-in-out;
+        }
+
+        .box-register {
+            position: absolute;
+            width: 85%;
+            right: -350px;
+            transition: .5s ease-in-out;
+        }
+
+        .top-header {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .top-header h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .input-group {
+            width: 100%;
+        }
+
+        .input-field {
+            margin: 12px 0;
+            position: relative;
+        }
+
+        .input-box {
+            width: 100%;
+            height: 50px;
+            font-size: 15px;
+            color: #040404;
+            border: none;
+            border-radius: 10px;
+            padding: 7px 45px 0 20px;
+            background: rgba(243, 242, 242, 0.6);
+            backdrop-filter: blur(2px);
+            outline: none;
+        }
+
+        .input-field label {
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            font-size: 15px;
+            transition: .3s ease-in-out;
+        }
+
+        .input-box:focus~label,
+        .input-box:valid~label {
+            top: 2px;
+            font-size: 10px;
+            color: #c12828;
+            font-weight: 500;
+        }
+
+        .eye-area {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+        }
+
+        .eye-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        i {
+            position: absolute;
+            color: #444444;
+            cursor: pointer;
+        }
+
+        #eye,
+        #eye-2 {
+            opacity: 1;
+        }
+
+        #eye-slash,
+        #eye-slash-2 {
+            opacity: 0;
+        }
+
+        .remember {
+            display: flex;
+            font-size: 13px;
+            margin: 12px 0 30px 0;
+            color: #000;
+        }
+
+        .check {
+            margin-right: 8px;
+            width: 14px;
+        }
+
+        .input-submit {
+            width: 100%;
+            height: 50px;
+            font-size: 15px;
+            font-weight: 500;
+            border: none;
+            border-radius: 10px;
+            background: hwb(180 1% 94%);
+            color: #fff;
+            box-shadow: 0px 4px 20px rgba(62, 9, 9, 0.145);
+            cursor: pointer;
+            transition: .4s;
+        }
+
+        .input-submit:hover {
+            background: #db3e00;
+            box-shadow: 0px 4px 20px rgba(62, 9, 9, 0.32);
+        }
+
+        .forgot {
+            text-align: center;
+            font-size: 13px;
+            font: 500;
+            margin-top: 40px;
+        }
+
+        .forgot a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .switch {
+            display: flex;
+            position: absolute;
+            bottom: 50px;
+            left: 25px;
+            width: 85%;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.16);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .switch a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 500;
+            color: #000;
+            text-decoration: none;
+            width: 50%;
+            border-radius: 10px;
+            z-index: 10;
+        }
+
+        #btn {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 145px;
+            height: 50px;
+            background: #cccccd;
+            border-radius: 10px;
+            box-shadow: 2px 0px 12px rgba(0, 0, 0, 0.1);
+            transition: .5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="box-login" id="login">
+                <div class="top-header">
+                    <h3>Welcome to Slash Mark!</h3>
+                    <small>Please sign-in to your account<br>Start the Internship.</small>
+                </div>
+                <div class="input-group">
+                    <div class="input-field">
+                        <input type="text" class="input-box" id="logEmail" required>
+                        <label for="logEmail">Email Id</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="input-box" id="logPassword" required>
+                        <label for="logPassword">Password</label>
+                        <div class="eye-area">
+                            <div class="eye-box" onclick="myLogPassword()">
+                                <i class="fa-regular fa-eye" id="eye"></i>
+                                <i class="fa-regular fa-eye-slash" id="eye-slash"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="remember">
+                        <input type="checkbox" id="formCheck" class="check">
+                        <label for="formCheck"> Remember Me</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="submit" class="input-submit" value="Sign In" onclick="checkCredentials()">
+                    </div>
+                </div>
+            </div>
+            <div class="switch">
+                <a href="#" class="login" onclick="login()">Login</a>
+                <a href="https://forms.gle/n4zVGxb8D5VR4wWT7" target="_blank" class="register">Register</a>
+                <div class="btn-active" id="btn"></div>
+            </div>
+        </div>
+    </div>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <script>
+        function login() {
+            // Handle switching between login and registration here.
+            const loginBox = document.getElementById("login");
+            const registerBox = document.getElementById("register");
+            const btn = document.getElementById("btn");
+
+            if (loginBox.style.left === "27px") {
+                loginBox.style.left = "-350px";
+                registerBox.style.right = "27px";
+                btn.style.left = "95px";
+            } else {
+                loginBox.style.left = "27px";
+                registerBox.style.right = "-350px";
+                btn.style.left = "0";
+            }
+        }
+
+        function myLogPassword() {
+            const passwordField = document.getElementById("logPassword");
+            const eyeIcon = document.getElementById("eye");
+            const eyeSlashIcon = document.getElementById("eye-slash");
+
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                eyeIcon.style.display = "none";
+                eyeSlashIcon.style.display = "block";
+            } else {
+                passwordField.type = "password";
+                eyeIcon.style.display = "block";
+                eyeSlashIcon.style.display = "none";
+            }
+        }
+
+        function checkCredentials() {
+    // Get the values of the email and password input fields
+    const emailInput = document.getElementById("logEmail");
+    const passwordInput = document.getElementById("logPassword");
+    const email = emailInput.value;
+    const password = passwordInput.value;
+
+    // Regular expression to validate email format
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Check if the email matches the valid format and the password is not empty
+    if (!emailPattern.test(email)) {
+        // Email is invalid
+        alert("Invalid email format. Please enter a valid email address.");
+        emailInput.focus(); // Focus on the email input field
+    } else if (password.trim() === "") {
+        // Password is empty
+        alert("Password cannot be empty. Please enter your password.");
+        passwordInput.focus(); // Focus on the password input field
+    } else if (password !== "8$2p@W&9y!Zu6R*") {
+        // Password is incorrect
+        alert("Incorrect password. Please enter the correct password.");
+        passwordInput.value = ""; // Clear the password field
+        passwordInput.focus(); // Focus on the password input field
+    } else {
+        // Both email and password are valid, redirect to the "dashboard.html" page
+        window.location.href = "dashboard.html";
+    }
+}
+
+    </script>
+</body>
+</html>

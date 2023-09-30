@@ -1,0 +1,167 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+/* Updated Color Combinations */
+
+/* General Styles */
+body {
+    font-family: "Roboto", sans-serif;
+    color: white; /* White text for dark background */
+    background-color: #16123F; /* Dark background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+.slash-mark-logo {
+    width: 90px;
+    height: 90px;
+}
+
+.nav-item {
+    color: white; /* White text for navigation */
+}
+
+/* Banner Styles */
+.banner-section-bg-container {
+    background-image: url("https://www.naceweb.org/uploadedImages/images/2019/feature/allowing-students-to-use-jobs-as-internships.jpg");
+    height: 100vh;
+    background-size: cover;
+}
+
+.banner-heading {
+    color: whitesmoke; /* Greenish color for heading */
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.banner-caption {
+    color: whitesmoke; /* Grayish color for caption */
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Button Styles */
+.button {
+    border-radius: 8px;
+    border-width: 0;
+}
+
+.custom-button {
+    color: white;
+    background-color: #16123F; /* Dark purple for buttons */
+    width: 130px;
+    height: 45px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.custom-outline-button {
+    color: #16123F; /* Dark purple for button text */
+    background-color: transparent;
+    width: 130px;
+    height: 45px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #16123F; /* Dark purple for button border */
+    border-radius: 8px;
+}
+
+/* Section Styles */
+.wcu-section,
+.wcu-section1,
+.card-section {
+    padding: 20px;
+}
+
+.wcu-section {
+    background-color: #16123F; /* Dark purple for section */
+}
+
+.wcu-section1 {
+    background-color: #75C9B7; /* Greenish color for section */
+}
+
+.wcu-section-heading {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.wcu-section-description,
+.section-description {
+    color: #5a7184;
+    font-size: 16px;
+}
+
+/* Card Styles */
+.wcu-card {
+    text-align: center;
+    background-color: white;
+    border: 1px solid #e5eaf4;
+    border-radius: 16px;
+}
+
+.wcu-card-image {
+    width: 87px;
+    height: 90px;
+}
+
+.wcu-card-title,
+.wcu-card-title1 {
+    color: #333; /* Dark gray for card titles */
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.wcu-card-title1 {
+    font-weight: 500;
+}
+
+.wcu-card-description {
+    color: #7b8794;
+    font-size: 16px;
+}
+
+/* Follow Us Section Styles */
+.follow-us-section {
+    background-color: white;
+}
+
+.follow-us-section-heading {
+    text-align: center;
+    color: white; /* White text for section heading */
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.follow-us-icon-container {
+    background-color: #16123F; /* Dark purple for icon container */
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin: 15px;
+    padding: 22px 16px 14px 22px;
+}
+
+.icon {
+    color: white; /* White color for icons */
+    font-size: 35px;
+}
+
+/* Footer Styles */
+.footer-section {
+    background-color: #0d2436; /* Dark blue for footer */
+}
+
+.footer-section-mail-id {
+    color: #95a5b7; /* Light gray for mail id */
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.footer-section-address {
+    color: #95a5b7; /* Light gray for address */
+    font-size: 14px;
+}
